@@ -39,20 +39,20 @@ Typical contents include:
 To build this project, you should have:
 
 - **Windows 10 or Windows 11**
-- **Visual Studio 2022**
+- **Visual Studio 2026**
   - Community, Professional, or Enterprise edition is fine
 - **.NET 8 SDK**
 - Visual Studio workload:
   - **.NET desktop development**
 
 Recommended:
-- latest Visual Studio 2022 updates installed
+- latest Visual Studio 2026 updates installed
 - latest .NET 8 updates installed
 
 ## How to compile
 
 1. Download and extract `CpuBenchmarkWorkbench_Windows11_VisualStudio_v17.zip`
-2. Open `CpuBenchmarkWorkbench.sln` in **Visual Studio 2022**
+2. Open `CpuBenchmarkWorkbench.sln` in **Visual Studio 2026**
 3. Let Visual Studio restore dependencies if prompted
 4. Select:
    - **Debug** or **Release**
