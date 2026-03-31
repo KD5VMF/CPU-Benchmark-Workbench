@@ -4,7 +4,7 @@ This folder contains packaged source archives for **CPU Benchmark Workbench**.
 
 ## Packages documented here
 
-This document now keeps both the earlier **v24** release information and the newer **v26** update information together.
+This document now keeps the earlier **v24** release information, the newer **v26** graph update information, and the latest **v27** update information together.
 
 ---
 
@@ -218,6 +218,48 @@ Build requirements remain the same as the v24 package unless the project files t
 
 ---
 
+## v27 package
+
+**File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v27.zip`  
+**Program version:** `27.0.0`
+
+### What changed in v27
+
+Version **27.0.0** keeps the earlier benchmark, scoring, and graphing direction while adding a more focused single-series graph explanation experience.
+
+Added or improved in v27:
+
+- The fullscreen graph keeps the **per-benchmark show / hide buttons** from v26
+- When only **one benchmark line** is visible, the **right-side panel** now shows a focused explanation for that selected test
+- The panel explains:
+  - what the selected benchmark measures
+  - what a healthy or expected scaling curve usually looks like
+  - what the current run appears to be suggesting
+- The focused text is meant to help the user understand whether the result looks more like:
+  - good scaling
+  - bandwidth or saturation behavior
+  - partial scaling
+  - something worth a closer look
+- The graph view was updated so the fullscreen graph is not only interactive, but also more informative when isolating a single benchmark
+
+In practical use, this means the fullscreen graph can now act more like a quick on-screen interpretation tool instead of only a raw line chart.
+
+This update is mainly a **single-selected-benchmark graph analysis and explanation improvement** layered on top of the earlier fullscreen graph controls.
+
+### Build and usage note for v27
+
+Build requirements remain the same as the earlier packages unless the project files themselves specify otherwise in the archive.
+
+### Notes for contributors and builders
+
+- Version in this archive: **27.0.0**
+- About dialog should match the application version
+- v27 keeps the fullscreen graph controls from v26
+- The main new user-facing change is the focused right-side analysis text when only one benchmark line is visible
+- This makes it easier to understand the currently isolated benchmark without having to manually interpret the graph alone
+
+---
+
 ## License
 
 This project is released under the **MIT License** unless otherwise noted in the repository.
@@ -225,3 +267,4 @@ This project is released under the **MIT License** unless otherwise noted in the
 ## Main repository
 
 For the full project, documentation, and updates, see the main repository root.
+
