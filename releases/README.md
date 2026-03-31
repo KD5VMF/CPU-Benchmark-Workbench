@@ -2,7 +2,13 @@
 
 This folder contains packaged source archives for **CPU Benchmark Workbench**.
 
-## Current package
+## Packages documented here
+
+This document now keeps both the earlier **v24** release information and the newer **v26** update information together.
+
+---
+
+## v24 package
 
 **File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v24.zip`  
 **Program version:** `24.0.0`
@@ -24,7 +30,7 @@ CPU Benchmark Workbench is a Windows desktop benchmark application for testing C
 - Overall system scoring
 - Best-use-case analysis based on benchmark results
 
-## What is inside the zip
+### What is inside the zip
 
 The zip is intended for people who want to **open, build, and modify the project in Visual Studio**.
 
@@ -36,7 +42,7 @@ Typical contents include:
 - project file
 - license and documentation files
 
-## Requirements to compile
+### Requirements to compile
 
 To build this project, you should have:
 
@@ -52,7 +58,7 @@ Recommended:
 - latest Visual Studio 2026 updates installed
 - latest .NET 8 updates installed
 
-## How to compile
+### How to compile
 
 1. Download and extract `CpuBenchmarkWorkbench_Windows11_VisualStudio_v24.zip`
 2. Open `CpuBenchmarkWorkbench.sln` in **Visual Studio 2026**
@@ -66,7 +72,7 @@ Recommended:
    - **Debug > Start Without Debugging**
    - or press **Ctrl+F5**
 
-## Runtime notes
+### Runtime notes
 
 The program is a Windows Forms desktop application built for modern .NET on Windows.
 
@@ -78,13 +84,14 @@ If building directly in Visual Studio with the included project, the proper runt
 
 The main application window is designed to start in a maximized state for easier viewing on large displays and high-core-count benchmark systems.
 
-## CPU feature support
+### CPU feature support
 
 The benchmark suite detects available CPU features and only enables certain tests when supported by the system and runtime.
 
 Examples include:
 
-- SSE / SSE2 / SSE3 / SSSE3
+- SSE / SSE2 / SSE3
+- SSSE3
 - SSE4.1 / SSE4.2
 - AVX
 - AVX2
@@ -95,7 +102,7 @@ Examples include:
 
 Because some features depend on both **hardware support** and **runtime exposure**, the exact test list may vary between systems.
 
-## Smart Sweep behavior
+### Smart Sweep behavior
 
 The **Smart Sweep** mode does not test every thread count from 1 to maximum.
 
@@ -117,7 +124,7 @@ Example on a 48-thread system:
 
 This gives a much faster scaling picture without excessive test time.
 
-## Burn-In mode
+### Burn-In mode
 
 The program also includes a **Burn-In Run** mode for longer stress-style benchmark cycling.
 
@@ -128,7 +135,7 @@ Use it to:
 - compare behavior over time
 - check stability during long workloads
 
-## Overall scoring
+### Overall scoring
 
 At the end of a completed benchmark session, CPU Benchmark Workbench can produce an **overall system score**.
 
@@ -141,7 +148,7 @@ Scoring features include:
 
 The score is intended to give a practical high-level summary of the system’s benchmark performance rather than replace detailed per-test analysis.
 
-## Best use case analysis
+### Best use case analysis
 
 After a run completes, the program also provides an opinion about the system’s strongest likely use case based on the benchmark profile.
 
@@ -155,7 +162,7 @@ Example categories may include:
 
 This helps users understand not just how fast the CPU is overall, but what kinds of workloads it appears best suited for.
 
-## Output files
+### Output files
 
 Depending on run options and version features, benchmark output may include:
 
@@ -166,7 +173,7 @@ Depending on run options and version features, benchmark output may include:
 
 These outputs make it easier to compare runs across different systems, settings, and future revisions.
 
-## Notes for contributors and builders
+### Notes for contributors and builders
 
 - Version in this archive: **24.0.0**
 - About dialog should match the application version
@@ -174,6 +181,42 @@ These outputs make it easier to compare runs across different systems, settings,
 - If your system does not support a feature, that benchmark may not appear
 - Intrinsics-heavy paths may behave differently across processors, BIOS settings, Windows scheduling behavior, and runtime versions
 - NUMA-aware behavior may significantly affect scaling on multi-socket or multi-node systems
+
+---
+
+## v26 package
+
+**File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v26.zip`  
+**Program version:** `26.0.0`
+
+### What changed in v26
+
+Version **26.0.0** keeps the same overall benchmark project direction while adding a graph-focused usability improvement.
+
+Added in v26:
+
+- Per-series **show / hide buttons** for the fullscreen graph
+- Quick **Show All** control
+- Quick **Hide All** control
+- Live graph redraw when visibility changes
+- Better fullscreen graph interaction when many benchmark lines are present
+
+In practical use, this means you can temporarily remove individual benchmark lines from the fullscreen chart so the graph is easier to read and compare.
+
+This update is primarily a **graph usability update** and does not represent a major change to the benchmark engine itself.
+
+### Build and usage note for v26
+
+Build requirements remain the same as the v24 package unless the project files themselves specify otherwise in the archive.
+
+### Notes for contributors and builders
+
+- Version in this archive: **26.0.0**
+- About dialog should match the application version
+- v26 is mainly a fullscreen graph update
+- The main new user-facing change is the ability to show or hide individual graph series quickly
+
+---
 
 ## License
 
