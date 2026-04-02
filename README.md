@@ -35,6 +35,72 @@ It is intended to be useful on:
 - Dynamic benchmark list that matches what the system reports
 - Final **overall score** from **0 to 100,000**
 - Final **best use case** opinion based on category scoring
+- Fullscreen **thread scaling graph** with per-series **Show All / Hide All / individual show-hide**
+- Single-series **focused analysis** panel that explains the selected benchmark and interprets the current run
+- Scrollable analysis text for longer per-benchmark evaluations
+- More benchmark-specific wording so different tests do not all read like the same generic result
+
+## Packaged release progression
+
+This project has been evolving in visible feature steps across the packaged source archives.
+
+### v24 package
+
+**File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v24.zip`  
+**Program version:** `24.0.0`
+
+Version 24 established the modern workbench direction:
+
+- broad benchmark family coverage
+- Smart Sweep thread sampling
+- burn-in support
+- overall system scoring
+- best-use-case analysis
+- Windows desktop Visual Studio project packaging
+
+### v26 package
+
+**File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v26.zip`  
+**Program version:** `26.0.0`
+
+Version 26 added the first major fullscreen graph usability upgrade:
+
+- per-series **show / hide** buttons in the fullscreen graph
+- quick **Show All**
+- quick **Hide All**
+- live redraw as series visibility changes
+- easier isolation of individual scaling curves
+
+### v27 package
+
+**File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v27.zip`  
+**Program version:** `27.0.0`
+
+Version 27 added focused single-series graph interpretation:
+
+- when only one benchmark line is visible, the right side shows a focused analysis area
+- the panel explains what the selected benchmark is testing
+- the panel describes what a healthy curve usually looks like
+- the panel interprets the current run and gives a practical scaling verdict
+- version 27 also received a small follow-up UI fix so longer analysis text can be scrolled cleanly
+
+### v28 package
+
+**File:** `CpuBenchmarkWorkbench_Windows11_VisualStudio_v28.zip`  
+**Program version:** `28.0.0`
+
+Version 28 keeps the fullscreen graph layout but makes the right-side analysis substantially smarter and less repetitive:
+
+- stronger benchmark-specific explanations instead of near-duplicate wording
+- more detail about the **actual math / kernel style** being used
+- better discussion of what hardware resource is really being stressed
+- improved interpretation of the **current measured curve**
+- more specific “what this says about this PC” commentary by benchmark family
+- section labels in the focused analysis area are styled more clearly for readability
+- the v28 refinements keep the same overall v28 version while polishing the wording and presentation
+
+For users, v28 is the current “smarter analyst” release: the graph does not just show one line at a time, it gives more benchmark-aware commentary about what that line means for the machine being tested.
+
 
 ## Benchmark families
 
@@ -74,6 +140,8 @@ CPU Benchmark Workbench is meant to show **what kind of work a machine is good a
 - scaling on many-core and multi-socket systems
 
 That makes it more useful for comparing machines that are very different from each other.
+
+The newer fullscreen graph tools also help users isolate one benchmark at a time and read a workload-specific interpretation of what the current scaling curve appears to say about the PC.
 
 ## Smart Sweep
 
